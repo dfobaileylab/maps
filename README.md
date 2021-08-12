@@ -10,6 +10,9 @@ This layer shows the depth of ocean for two important threshold that is related 
 
 ![2000depth](bathymetry_2000m/bathy2000.png)
 
+There are two formats of data available for this layer both are included in the `bathymetry_2000m` folder.  
+The shape file includes all files starting with `ne_10m`. The raster file generated for this layer is in the raster folder. [bathymetry 2000 m](https://github.com/dfobaileylab/maps/blob/main/bathymetry_2000m/raster/Bathy2000mDepth.zip). This file includes two resolutions for this layer: each pixel is about 100 meter (for calculations), each pixel is about 2000 meters (for visualization)
+
 ### Bathymetry with depth of 200meter
 
 ![200depth](bathymetry_2000m/bathy200.png)
