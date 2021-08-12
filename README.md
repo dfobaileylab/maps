@@ -22,3 +22,7 @@ The shape file includes all files starting with `ne_10m`. The raster file genera
 ![2002000depth](bathymetry_2000m/both.png)
 
 
+## Distance to Shore
+
+## Ballast Exchange 
+![ballast exchange](exchange/exchange.png)
