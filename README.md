@@ -34,7 +34,12 @@ Create raster layers:
 3. under analyze/tools find Polygon to raster
 4. select input feature and input field
 5. set cell size to  0.01799 for ~ 2000 meters resolution [use 0.00089993 for ~ 100 meters resolution]
-6. go to environment tab. under extend as specified below define the -180..180 and -90..90 to cover the whole earth
+```
+[2000m * 1 min/1852m ] * 1 deg/60min = 0.017999 DD
+[100m * 1 min/1852m ]* 1 deg/60min = 0.00089993 DD
+```
+> Note that based on location on the earth a deg can have different distance. therefore, we use degree to show the accuracy of raster instead of meter.
+6. go to environment tab. under extend as specified below define the `[-180..180]` and `[-90..90]` to cover the whole earth
 7. run 
 8. use raster calculator to fill the no data parts
 9. add following condition `Con( IsNull("exchange_PolygonToRaster") ,0,"exchange_PolygonToRaster")`
@@ -42,3 +47,6 @@ Create raster layers:
 11. the `tif` and `tfw` files will be ready after processing.
 
 We processed for both resolution and the zip file is available [here](https://github.com/dfobaileylab/maps/blob/main/exchange/raster/exchange.zip) 
+
+ 
+
