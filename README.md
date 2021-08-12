@@ -24,5 +24,21 @@ The shape file includes all files starting with `ne_10m`. The raster file genera
 
 ## Distance to Shore
 
-## Ballast Exchange 
+## Canada's designated alternate ballast water exchange areas - Canada Alternate Ballast Water Exchange Areas
 ![ballast exchange](exchange/exchange.png)
+[source of data](https://open.canada.ca/data/en/dataset/23d26c61-b119-42c0-aa41-bd06cd96a973/resource/466c0c9c-b2da-43a4-8d35-489959d85a68?inner_span=True)
+
+Create raster layers:
+1. open shape file in ArcGIS Pro
+2. add exchange field for all records in attribute table
+3. under analyze/tools find Polygon to raster
+4. select input feature and input field
+5. set cell size to  0.01799 for ~ 2000 meters resolution [use 0.00089993 for ~ 100 meters resolution]
+6. go to environment tab. under extend as specified below define the -180..180 and -90..90 to cover the whole earth
+7. run 
+8. use raster calculator to fill the no data parts
+9. add following condition `Con( IsNull("exchange_PolygonToRaster") ,0,"exchange_PolygonToRaster")`
+10. go to environment tab. under extend as specified below define the -180..180 and -90..90 to cover the whole earth
+11. the `tif` and `tfw` files will be ready after processing.
+
+We processed for both resolution and the zip file is available [here](https://github.com/dfobaileylab/maps/blob/main/exchange/raster/exchange.zip) 
