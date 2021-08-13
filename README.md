@@ -24,6 +24,20 @@ The shape file includes all files starting with `ne_10m`. The raster file genera
 
 ## Distance to Shore
 
+We have two layers here:
+1. 50nm distance from the shore
+2. 200nm distance from the shore
+
+We used natural earth land data to create these layers. We have applied buffer tool with 50nm, and 200nm in ArcGIS Pro. Here is a screen shot of these layer.
+
+For each layer we generated two resolution raster files with accuracy of  0.01799 degrees and 0.00089993 degrees which is roughly near 2000 meters and 100 meters for each pixel]
+### 50nm
+
+![50nm](distance_to_shore/50nm.png)
+### 200nm
+
+![200nm](distance_to_shore/200nm.png)
+
 ## Canada's designated alternate ballast water exchange areas - Canada Alternate Ballast Water Exchange Areas
 ![ballast exchange](exchange/exchange.png)
 [source of data](https://open.canada.ca/data/en/dataset/23d26c61-b119-42c0-aa41-bd06cd96a973/resource/466c0c9c-b2da-43a4-8d35-489959d85a68?inner_span=True)
@@ -47,6 +61,7 @@ Create raster layers:
 11. the `tif` and `tfw` files will be ready after processing.
 
 We processed for both resolution and the zip file is available [here](https://github.com/dfobaileylab/maps/blob/main/exchange/raster/exchange.zip) 
+
 
  
 
